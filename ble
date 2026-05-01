@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 19th Gigi!</title>
+    <style>
+        body {
+            background-color: #0d0d0d; /* Sleek Black */
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            padding: 25px;
+            width: 85%;
+            max-width: 400px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 152, 0, 0.2);
+        }
+        .orange { color: #FF9800; } /* Haikyuu Orange */
+        .icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .btn {
+            background-color: #FF9800;
+            color: black;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 25px;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .btn:active { transform: scale(0.95); }
+        .hidden { display: none; }
+        .letter {
+            text-align: left;
+            line-height: 1.7;
+            font-size: 15px;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="p1" class="container">
+        <div class="icon">🏐</div>
+        <h1>Happy <span class="orange">19th</span> Birthday, <br>Gigi/babi!</h1>
+        <button class="btn" onclick="show(2)">next :3</button>
+    </div>
+
+    <div id="p2" class="container hidden">
+        <div class="icon">✨</div>
+        <h2>I have a surprise for you...</h2>
+        <p>Wanna see it?</p>
+        <button class="btn" onclick="show(3)">YES!!</button>
+    </div>
+
+    <div id="p3" class="container hidden">
+        <div class="letter">
+            <p><strong>To my Gigi/babi,</strong></p>
+            <p>Happy 19th birthday! I’m so incredibly proud of the person you are and everything you’ve been achieving. Seeing how hard you work always inspires me.</p>
+            <p>Whether we're together or spending time apart, you always find a way to make me feel special. My world is so much brighter just because you're in it, and I feel so lucky to be by your side for another year of your life.</p>
+            <p>I hope today is as amazing as you are. I love you, always and forever!</p>
+        </div>
+        <button class="btn" onclick="location.reload()">read again ♡</button>
+    </div>
+
+    <script>
+        function show(num) {
+            document.getElementById('p1').classList.add('hidden');
+            document.getElementById('p2').classList.add('hidden');
+            document.getElementById('p3').classList.add('hidden');
+            document.getElementById('p' + num).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
